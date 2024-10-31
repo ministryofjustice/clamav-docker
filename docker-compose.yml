@@ -1,0 +1,12 @@
+version: '3.6'
+services:
+  laa-clamav:
+    build:
+      context: .
+    expose:
+      - "3310"
+    volumes:
+      - ./data:/var/lib/clamav
+    environment:
+      - FRESHCLAM_CHECKS=24
+      - MIRROR_URL=<your_local_mirror>
