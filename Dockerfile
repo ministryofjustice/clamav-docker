@@ -1,4 +1,4 @@
-FROM clamav/clamav:1.4.1-12
+FROM clamav/clamav-debian:stable
 
 
 COPY ./clamav/ /etc/clamav/
