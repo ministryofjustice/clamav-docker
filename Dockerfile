@@ -1,4 +1,4 @@
-FROM clamav/clamav:1.4.1-10
+FROM clamav/clamav:1.4.1-12
 
 
 COPY ./clamav/ /etc/clamav/
