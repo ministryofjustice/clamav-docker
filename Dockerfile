@@ -9,5 +9,5 @@ RUN mkdir -p /run/clamav && chown -R clamav:clamav /run/clamav
 COPY "./scripts/wrapper-entrypoint.sh" "/wrapper-init"
 RUN chmod +x /wrapper-init
 
-USER clamav
+USER 1000
 ENTRYPOINT [ "/wrapper-init" ]
