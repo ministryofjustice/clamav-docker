@@ -2,8 +2,9 @@ FROM clamav/clamav-debian:stable
 
 COPY ./clamav/ /etc/clamav/
 
-USER root
+
 RUN chown -R clamav:clamav /etc/clamav
+RUN chown -R clamav:clamav /var/lib/clamav
 RUN mkdir -p /run/clamav && chown -R clamav:clamav /run/clamav
 
 COPY "./scripts/wrapper-entrypoint.sh" "/wrapper-init"
