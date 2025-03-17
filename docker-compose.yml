@@ -9,4 +9,4 @@ services:
       - ./data:/var/lib/clamav
     environment:
       - FRESHCLAM_CHECKS=24
-      - MIRROR_URL=<your_local_mirror>
+      - MIRROR_URL=https:/mirror.com
