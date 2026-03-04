@@ -2,6 +2,8 @@
 
 This repository contains a modified Docker image for ClamAV. The image is almost identical to the central ClamAV Docker image, but includes a wrapper init that reconfigures it. Our main goal with these modifications is to allow users the flexibility of either using a private mirror or continuing with the central mirror.
 
+[![Ministry of Justice Repository Compliance Badge](https://github-community.service.justice.gov.uk/repository-standards/api/clamav-docker/badge)](https://github-community.service.justice.gov.uk/repository-standards/clamav-docker)
+
 ## Usage
 
 ### Docker Compose
@@ -25,8 +27,8 @@ services:
     volumes:
       - ./data:/var/lib/clamav
     environment:
-      - FRESHCLAM_CHECKS=24 
-      - MIRROR_URL=https:/mirror.com 
+      - FRESHCLAM_CHECKS=24
+      - MIRROR_URL=https:/mirror.com
 ```
 
 In this configuration, `FRESHCLAM_CHECKS` indicates how many times ClamAV should check for updates each day, while `MIRROR_URL` should be set to your private mirror URL.
